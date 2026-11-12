@@ -1,0 +1,12 @@
+# 依存パッケージとビルド結果
+node_modules/
+app/dist/
+# npm run dev / build のたびに questions/ と reports/ から生成する
+app/src/data/bank.json
+# npm run review で生成するレビューページ
+reports/review/
+# 実行サーバーの秘密情報
+runner/.env
+# OS・エディタ
+.DS_Store
+*.log

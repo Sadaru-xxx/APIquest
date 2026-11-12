@@ -1,0 +1,20 @@
+{
+  "name": "java-silver-runner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Java Silver 演習アプリ用の JDK 17 実行サーバー(リモート MCP)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.4",
+    "zod": "^3.25.76"
+  }
+}

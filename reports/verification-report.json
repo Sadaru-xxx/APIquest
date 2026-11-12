@@ -1,0 +1,2679 @@
+{
+  "summary": {
+    "jdk": "openjdk version \"17.0.21.0.3\" 2026-10-24",
+    "checkedAt": "2026-11-11T05:45:19.414Z",
+    "total": 75,
+    "passed": 75,
+    "failed": 0,
+    "structure": {
+      "groups": 25,
+      "issues": [],
+      "warnings": []
+    }
+  },
+  "results": [
+    {
+      "id": "oc-01a",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "4,3"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "4,3\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-01b",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "8,7"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "8,7\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-01c",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "9,9"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "9,9\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-02a",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "6 54"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "6 54\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-02b",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "4 28"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "4 28\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-02c",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "3 0"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "3 0\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-03a",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "例外",
+        "exception": "java.lang.ArithmeticException",
+        "stdout": "-3.0\n-1\n-Infinity"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "-3.0\n-1\n-Infinity\n",
+        "stderr": "Exception in thread \"main\" java.lang.ArithmeticException: / by zero\n\tat Main.main(Main.java:8)\n",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-03b",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "例外",
+        "exception": "java.lang.ArithmeticException",
+        "stdout": "-2.0\n-1\n-Infinity"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "-2.0\n-1\n-Infinity\n",
+        "stderr": "Exception in thread \"main\" java.lang.ArithmeticException: / by zero\n\tat Main.main(Main.java:8)\n",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-03c",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "例外",
+        "exception": "java.lang.ArithmeticException",
+        "stdout": "-2.0\n1\nInfinity"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "-2.0\n1\nInfinity\n",
+        "stderr": "Exception in thread \"main\" java.lang.ArithmeticException: / by zero\n\tat Main.main(Main.java:8)\n",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-04a",
+      "ok": true,
+      "matched": [
+        "B",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "E"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+            }
+          ],
+          "javac": "Main.java:3: エラー: 不適合な型: 精度が失われる可能性があるintからbyteへの変換\n        byte b = 10; b = b + 1;\n                           ^\nエラー1個\n"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "不適合な型: 精度が失われる可能性があるlongからintへの変換"
+            }
+          ],
+          "javac": "Main.java:3: エラー: 不適合な型: 精度が失われる可能性があるlongからintへの変換\n        int i = 10L;\n                ^\nエラー1個\n"
+        },
+        "F": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 3,
+          "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 3,
+          "message": "不適合な型: 精度が失われる可能性があるlongからintへの変換"
+        }
+      ]
+    },
+    {
+      "id": "oc-04b",
+      "ok": true,
+      "matched": [
+        "A",
+        "F"
+      ],
+      "answer": [
+        "A",
+        "F"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "不適合な型: 精度が失われる可能性があるlongからintへの変換"
+            }
+          ],
+          "javac": "Main.java:3: エラー: 不適合な型: 精度が失われる可能性があるlongからintへの変換\n        int j = 25L;\n                ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        },
+        "F": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+            }
+          ],
+          "javac": "Main.java:3: エラー: 不適合な型: 精度が失われる可能性があるintからbyteへの変換\n        byte k = 20; k = k + 2;\n                           ^\nエラー1個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 3,
+          "message": "不適合な型: 精度が失われる可能性があるlongからintへの変換"
+        },
+        {
+          "option": "F",
+          "file": "Main.java",
+          "line": 3,
+          "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+        }
+      ]
+    },
+    {
+      "id": "oc-04c",
+      "ok": true,
+      "matched": [
+        "A",
+        "D"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "不適合な型: 精度が失われる可能性があるdoubleからfloatへの変換"
+            }
+          ],
+          "javac": "Main.java:3: エラー: 不適合な型: 精度が失われる可能性があるdoubleからfloatへの変換\n        float f = 1.5;\n                  ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "不適合な型: 精度が失われる可能性があるintからshortへの変換"
+            }
+          ],
+          "javac": "Main.java:3: エラー: 不適合な型: 精度が失われる可能性があるintからshortへの変換\n        short s = 5; s = s * 2;\n                           ^\nエラー1個\n"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        },
+        "F": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 3,
+          "message": "不適合な型: 精度が失われる可能性があるdoubleからfloatへの変換"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "不適合な型: 精度が失われる可能性があるintからshortへの変換"
+        }
+      ]
+    },
+    {
+      "id": "oc-05a",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "9\n5"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "9\n5\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-05b",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "16\n8"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "16\n8\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-05c",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "20\n7"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "20\n7\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-06a",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "4 10"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "4 10\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-06b",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "6 20"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "6 20\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-06c",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "5 9"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "5 9\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-07a",
+      "ok": true,
+      "matched": [
+        "B",
+        "D"
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "二項演算子'<'のオペランド型が不正です"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 二項演算子'<'のオペランド型が不正です\n        boolean r = a < b < 10;\n                          ^\n  最初の型: boolean\n  2番目の型: int\nエラー1個\n"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "単項演算子'!'のオペランド型intが不正です"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 単項演算子'!'のオペランド型intが不正です\n        boolean r = !a;\n                    ^\nエラー1個\n"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 4,
+          "message": "二項演算子'<'のオペランド型が不正です"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 4,
+          "message": "単項演算子'!'のオペランド型intが不正です"
+        }
+      ]
+    },
+    {
+      "id": "oc-07b",
+      "ok": true,
+      "matched": [
+        "A",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "E"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "単項演算子'!'のオペランド型intが不正です"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 単項演算子'!'のオペランド型intが不正です\n        boolean f = !p;\n                    ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "二項演算子'<'のオペランド型が不正です"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 二項演算子'<'のオペランド型が不正です\n        boolean f = p < q < 20;\n                          ^\n  最初の型: boolean\n  2番目の型: int\nエラー1個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 4,
+          "message": "単項演算子'!'のオペランド型intが不正です"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 4,
+          "message": "二項演算子'<'のオペランド型が不正です"
+        }
+      ]
+    },
+    {
+      "id": "oc-07c",
+      "ok": true,
+      "matched": [
+        "B",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "E"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "二項演算子'&&'のオペランド型が不正です"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 二項演算子'&&'のオペランド型が不正です\n        boolean r = x > 0 && y;\n                          ^\n  最初の型: boolean\n  2番目の型: int\nエラー1個\n"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "二項演算子'<'のオペランド型が不正です"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 二項演算子'<'のオペランド型が不正です\n        boolean r = 0 < x < y;\n                          ^\n  最初の型: boolean\n  2番目の型: int\nエラー1個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 4,
+          "message": "二項演算子'&&'のオペランド型が不正です"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 4,
+          "message": "二項演算子'<'のオペランド型が不正です"
+        }
+      ]
+    },
+    {
+      "id": "oc-08a",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "true 1"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "true 1\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-08b",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "true 5"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "true 5\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-08c",
+      "ok": true,
+      "matched": [
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "true 5"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "true 5\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-09a",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "B"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "B\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-09b",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "mild"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "mild\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-09c",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "コンパイルエラー",
+        "errors": [
+          {
+            "file": "Main.java",
+            "line": 4,
+            "message": "文ではありません"
+          }
+        ]
+      },
+      "compileErrors": [
+        {
+          "file": "Main.java",
+          "line": 4,
+          "message": "文ではありません"
+        }
+      ],
+      "console": {
+        "compile": "error",
+        "javac": "Main.java:4: エラー: 文ではありません\n        n > 0 ? System.out.println(\"plus\") : System.out.println(\"minus\");\n              ^\nエラー1個\n"
+      }
+    },
+    {
+      "id": "oc-10a",
+      "ok": true,
+      "matched": [
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "3\n3320"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "3\n3320\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-10b",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "5\n5430"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "5\n5430\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-10c",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "11\n1645"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "11\n1645\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-11a",
+      "ok": true,
+      "matched": [
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "actual": {
+        "result": "コンパイルエラー",
+        "errors": [
+          {
+            "file": "Main.java",
+            "line": 7,
+            "message": "不適合な型: intをbooleanに変換できません"
+          }
+        ]
+      },
+      "compileErrors": [
+        {
+          "file": "Main.java",
+          "line": 7,
+          "message": "不適合な型: intをbooleanに変換できません"
+        }
+      ],
+      "console": {
+        "compile": "error",
+        "javac": "Main.java:7: エラー: 不適合な型: intをbooleanに変換できません:\n        } else if (x = 10) {\n                     ^\nエラー1個\n"
+      }
+    },
+    {
+      "id": "oc-11b",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "コンパイルエラー",
+        "errors": [
+          {
+            "file": "Main.java",
+            "line": 7,
+            "message": "不適合な型: intをbooleanに変換できません"
+          }
+        ]
+      },
+      "compileErrors": [
+        {
+          "file": "Main.java",
+          "line": 7,
+          "message": "不適合な型: intをbooleanに変換できません"
+        }
+      ],
+      "console": {
+        "compile": "error",
+        "javac": "Main.java:7: エラー: 不適合な型: intをbooleanに変換できません:\n        } else if (y = 20) {\n                     ^\nエラー1個\n"
+      }
+    },
+    {
+      "id": "oc-11c",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "Y"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "Y\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-12a",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "2\n3"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "2\n3\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-12b",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "Z"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "Z\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-12c",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "congrats end"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "congrats end",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-13a",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "BC"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "BC",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-13b",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "XY"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "XY",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-13c",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "234"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "234",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-14a",
+      "ok": true,
+      "matched": [
+        "A",
+        "D",
+        "F"
+      ],
+      "answer": [
+        "A",
+        "D",
+        "F"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type int is not compatible with switch selector type long"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        long x = 1L; switch (x) { case 1: break; }\n                            ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type int is not compatible with switch selector type long\n        long x = 1L; switch (x) { case 1: break; }\n                                       ^\nエラー2個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type boolean is not compatible with switch selector type boolean"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        boolean x = true; switch (x) { case true: break; }\n                                 ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type boolean is not compatible with switch selector type boolean\n        boolean x = true; switch (x) { case true: break; }\n                                            ^\nエラー2個\n"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        },
+        "F": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type double is not compatible with switch selector type double"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        double x = 1.0; switch (x) { case 1.0: break; }\n                               ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type double is not compatible with switch selector type double\n        double x = 1.0; switch (x) { case 1.0: break; }\n                                          ^\nエラー2個\n"
+        },
+        "G": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type int is not compatible with switch selector type long"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type boolean is not compatible with switch selector type boolean"
+        },
+        {
+          "option": "F",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "F",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type double is not compatible with switch selector type double"
+        }
+      ]
+    },
+    {
+      "id": "oc-14b",
+      "ok": true,
+      "matched": [
+        "B",
+        "E",
+        "G"
+      ],
+      "answer": [
+        "B",
+        "E",
+        "G"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type double is not compatible with switch selector type double"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        double v = 2.5; switch (v) { case 2.5: break; }\n                               ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type double is not compatible with switch selector type double\n        double v = 2.5; switch (v) { case 2.5: break; }\n                                          ^\nエラー2個\n"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type int is not compatible with switch selector type long"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        long v = 5L; switch (v) { case 5: break; }\n                            ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type int is not compatible with switch selector type long\n        long v = 5L; switch (v) { case 5: break; }\n                                       ^\nエラー2個\n"
+        },
+        "F": {
+          "result": "コンパイル成功"
+        },
+        "G": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type boolean is not compatible with switch selector type boolean"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        boolean v = false; switch (v) { case false: break; }\n                                  ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type boolean is not compatible with switch selector type boolean\n        boolean v = false; switch (v) { case false: break; }\n                                             ^\nエラー2個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type double is not compatible with switch selector type double"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type int is not compatible with switch selector type long"
+        },
+        {
+          "option": "G",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "G",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type boolean is not compatible with switch selector type boolean"
+        }
+      ]
+    },
+    {
+      "id": "oc-14c",
+      "ok": true,
+      "matched": [
+        "B",
+        "D",
+        "G"
+      ],
+      "answer": [
+        "B",
+        "D",
+        "G"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type float is not compatible with switch selector type float"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        float f = 1.0F; switch (f) { case 1.0F: break; }\n                               ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type float is not compatible with switch selector type float\n        float f = 1.0F; switch (f) { case 1.0F: break; }\n                                          ^\nエラー2個\n"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type long is not compatible with switch selector type Long"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        Long l = 1L; switch (l) { case 1L: break; }\n                            ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type long is not compatible with switch selector type Long\n        Long l = 1L; switch (l) { case 1L: break; }\n                                       ^\nエラー2個\n"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        },
+        "F": {
+          "result": "コンパイル成功"
+        },
+        "G": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+            },
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "constant label of type boolean is not compatible with switch selector type Boolean"
+            }
+          ],
+          "javac": "Main.java:3: エラー: patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。\n        Boolean b = false; switch (b) { case false: break; }\n                                  ^\n  (patterns in switch statementsを有効にするには--enable-previewを使用します)\nMain.java:3: エラー: constant label of type boolean is not compatible with switch selector type Boolean\n        Boolean b = false; switch (b) { case false: break; }\n                                             ^\nエラー2個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type float is not compatible with switch selector type float"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type long is not compatible with switch selector type Long"
+        },
+        {
+          "option": "G",
+          "file": "Main.java",
+          "line": 3,
+          "message": "patterns in switch statementsはプレビュー機能であり、デフォルトで無効になっています。"
+        },
+        {
+          "option": "G",
+          "file": "Main.java",
+          "line": 3,
+          "message": "constant label of type boolean is not compatible with switch selector type Boolean"
+        }
+      ]
+    },
+    {
+      "id": "oc-15a",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "コンパイルエラー",
+        "errors": [
+          {
+            "file": "Main.java",
+            "line": 10,
+            "message": "定数式が必要です"
+          },
+          {
+            "file": "Main.java",
+            "line": 13,
+            "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+          }
+        ]
+      },
+      "compileErrors": [
+        {
+          "file": "Main.java",
+          "line": 10,
+          "message": "定数式が必要です"
+        },
+        {
+          "file": "Main.java",
+          "line": 13,
+          "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+        }
+      ],
+      "console": {
+        "compile": "error",
+        "javac": "Main.java:10: エラー: 定数式が必要です\n            case two:\n                 ^\nMain.java:13: エラー: 不適合な型: 精度が失われる可能性があるintからbyteへの変換\n            case 128:\n                 ^\nエラー2個\n"
+      }
+    },
+    {
+      "id": "oc-15b",
+      "ok": true,
+      "matched": [
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "actual": {
+        "result": "コンパイルエラー",
+        "errors": [
+          {
+            "file": "Main.java",
+            "line": 10,
+            "message": "定数式が必要です"
+          },
+          {
+            "file": "Main.java",
+            "line": 13,
+            "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+          }
+        ]
+      },
+      "compileErrors": [
+        {
+          "file": "Main.java",
+          "line": 10,
+          "message": "定数式が必要です"
+        },
+        {
+          "file": "Main.java",
+          "line": 13,
+          "message": "不適合な型: 精度が失われる可能性があるintからbyteへの変換"
+        }
+      ],
+      "console": {
+        "compile": "error",
+        "javac": "Main.java:10: エラー: 定数式が必要です\n            case twenty:\n                 ^\nMain.java:13: エラー: 不適合な型: 精度が失われる可能性があるintからbyteへの変換\n            case 200:\n                 ^\nエラー2個\n"
+      }
+    },
+    {
+      "id": "oc-15c",
+      "ok": true,
+      "matched": [
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "actual": {
+        "result": "コンパイルエラー",
+        "errors": [
+          {
+            "file": "Main.java",
+            "line": 13,
+            "message": "定数式が必要です"
+          },
+          {
+            "file": "Main.java",
+            "line": 16,
+            "message": "caseラベルが重複しています"
+          }
+        ]
+      },
+      "compileErrors": [
+        {
+          "file": "Main.java",
+          "line": 13,
+          "message": "定数式が必要です"
+        },
+        {
+          "file": "Main.java",
+          "line": 16,
+          "message": "caseラベルが重複しています"
+        }
+      ],
+      "console": {
+        "compile": "error",
+        "javac": "Main.java:13: エラー: 定数式が必要です\n            case d:\n                 ^\nMain.java:16: エラー: caseラベルが重複しています\n            case 99:\n            ^\nエラー2個\n"
+      }
+    },
+    {
+      "id": "oc-16a",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "D12"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "D12",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-16b",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "Q45"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "Q45",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-16c",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "c"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "c",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-17a",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "B"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "B",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-17b",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "Q"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "Q",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-17c",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "1"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "1",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-18a",
+      "ok": true,
+      "matched": [
+        "B",
+        "C"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "switch式がすべての可能な入力値をカバーしていません"
+            }
+          ],
+          "javac": "Main.java:4: エラー: switch式がすべての可能な入力値をカバーしていません\n        String s = switch (n) { case 1 -> \"one\"; case 2 -> \"two\"; };\n                   ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "switch式の外側でreturnを実行しようとしています"
+            }
+          ],
+          "javac": "Main.java:4: エラー: switch式の外側でreturnを実行しようとしています\n        String s = switch (n) { case 1 -> \"one\"; default -> { return; } };\n                                                              ^\nエラー1個\n"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "文ではありません"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 文ではありません\n        String s = switch (n) { case 1 -> \"one\"; default -> { \"other\"; } };\n                                                              ^\nエラー1個\n"
+        },
+        "F": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "';'がありません"
+            },
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "case、defaultまたは'}'がありません"
+            },
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "case、defaultまたは'}'がありません"
+            }
+          ],
+          "javac": "Main.java:4: エラー: ';'がありません\n        String s = switch (n) { case 1 -> yield \"one\"; default -> \"other\"; };\n                                               ^\nMain.java:4: エラー: case、defaultまたは'}'がありません\n        String s = switch (n) { case 1 -> yield \"one\"; default -> \"other\"; };\n                                                ^\nMain.java:4: エラー: case、defaultまたは'}'がありません\n        String s = switch (n) { case 1 -> yield \"one\"; default -> \"other\"; };\n                                                     ^\nエラー3個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 4,
+          "message": "switch式がすべての可能な入力値をカバーしていません"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 4,
+          "message": "switch式の外側でreturnを実行しようとしています"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 4,
+          "message": "文ではありません"
+        },
+        {
+          "option": "F",
+          "file": "Main.java",
+          "line": 4,
+          "message": "';'がありません"
+        },
+        {
+          "option": "F",
+          "file": "Main.java",
+          "line": 4,
+          "message": "case、defaultまたは'}'がありません"
+        },
+        {
+          "option": "F",
+          "file": "Main.java",
+          "line": 4,
+          "message": "case、defaultまたは'}'がありません"
+        }
+      ]
+    },
+    {
+      "id": "oc-18b",
+      "ok": true,
+      "matched": [
+        "B",
+        "F"
+      ],
+      "answer": [
+        "B",
+        "F"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "switch式の外側でreturnを実行しようとしています"
+            }
+          ],
+          "javac": "Main.java:4: エラー: switch式の外側でreturnを実行しようとしています\n        String t = switch (k) { case 2 -> \"two\"; default -> { return; } };\n                                                              ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "switch式がすべての可能な入力値をカバーしていません"
+            }
+          ],
+          "javac": "Main.java:4: エラー: switch式がすべての可能な入力値をカバーしていません\n        String t = switch (k) { case 2 -> \"two\"; case 3 -> \"three\"; };\n                   ^\nエラー1個\n"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "';'がありません"
+            },
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "case、defaultまたは'}'がありません"
+            },
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "case、defaultまたは'}'がありません"
+            }
+          ],
+          "javac": "Main.java:4: エラー: ';'がありません\n        String t = switch (k) { case 2 -> yield \"two\"; default -> \"many\"; };\n                                               ^\nMain.java:4: エラー: case、defaultまたは'}'がありません\n        String t = switch (k) { case 2 -> yield \"two\"; default -> \"many\"; };\n                                                ^\nMain.java:4: エラー: case、defaultまたは'}'がありません\n        String t = switch (k) { case 2 -> yield \"two\"; default -> \"many\"; };\n                                                     ^\nエラー3個\n"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "文ではありません"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 文ではありません\n        String t = switch (k) { case 2 -> \"two\"; default -> { \"many\"; } };\n                                                              ^\nエラー1個\n"
+        },
+        "F": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 4,
+          "message": "switch式の外側でreturnを実行しようとしています"
+        },
+        {
+          "option": "C",
+          "file": "Main.java",
+          "line": 4,
+          "message": "switch式がすべての可能な入力値をカバーしていません"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 4,
+          "message": "';'がありません"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 4,
+          "message": "case、defaultまたは'}'がありません"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 4,
+          "message": "case、defaultまたは'}'がありません"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 4,
+          "message": "文ではありません"
+        }
+      ]
+    },
+    {
+      "id": "oc-18c",
+      "ok": true,
+      "matched": [
+        "A",
+        "D"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "switchでcaseの異なる種類が使用されています"
+            }
+          ],
+          "javac": "Main.java:4: エラー: switchでcaseの異なる種類が使用されています\n        int r = switch (code) { case 1: yield 10; case 2 -> 20; default: yield 0; };\n                                                  ^\nエラー1個\n"
+        },
+        "C": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "switch式がすべての可能な入力値をカバーしていません"
+            }
+          ],
+          "javac": "Main.java:4: エラー: switch式がすべての可能な入力値をカバーしていません\n        int r = switch (code) { case 1 -> 10; case 2 -> 20; };\n                ^\nエラー1個\n"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "switch式の外側でbreakを実行しようとしています"
+            }
+          ],
+          "javac": "Main.java:4: エラー: switch式の外側でbreakを実行しようとしています\n        int r = switch (code) { case 1 -> 10; default -> { break; } };\n                                                           ^\nエラー1個\n"
+        },
+        "F": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 4,
+              "message": "不適合な型: switch式の型が不正です"
+            }
+          ],
+          "javac": "Main.java:4: エラー: 不適合な型: switch式の型が不正です\n        int r = switch (code) { case 1 -> 10; default -> \"zero\"; };\n                                                         ^\n    Stringをintに変換できません:\nエラー1個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 4,
+          "message": "switchでcaseの異なる種類が使用されています"
+        },
+        {
+          "option": "C",
+          "file": "Main.java",
+          "line": 4,
+          "message": "switch式がすべての可能な入力値をカバーしていません"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 4,
+          "message": "switch式の外側でbreakを実行しようとしています"
+        },
+        {
+          "option": "F",
+          "file": "Main.java",
+          "line": 4,
+          "message": "不適合な型: switch式の型が不正です"
+        }
+      ]
+    },
+    {
+      "id": "oc-19a",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "one two 20"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "one two 20\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-19b",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "red blue 30"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "red blue 30\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-19c",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "BC3"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "BC3\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-20a",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "10 end"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "10 end",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-20b",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "7 fin"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "7 fin",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-20c",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "done"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "done",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-21a",
+      "ok": true,
+      "matched": [
+        "A",
+        "D"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "この文に制御が移ることはありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: この文に制御が移ることはありません\n        while (false) { System.out.println(\"A\"); }\n                      ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "この文に制御が移ることはありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: この文に制御が移ることはありません\n        for (int i = 0; false; i++) { System.out.println(\"D\"); }\n                                    ^\nエラー1個\n"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 3,
+          "message": "この文に制御が移ることはありません"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "この文に制御が移ることはありません"
+        }
+      ]
+    },
+    {
+      "id": "oc-21b",
+      "ok": true,
+      "matched": [
+        "C",
+        "E"
+      ],
+      "answer": [
+        "C",
+        "E"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "この文に制御が移ることはありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: この文に制御が移ることはありません\n        for (int k = 0; false; k++) { System.out.println(\"S\"); }\n                                    ^\nエラー1個\n"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "この文に制御が移ることはありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: この文に制御が移ることはありません\n        while (false) { System.out.println(\"P\"); }\n                      ^\nエラー1個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "C",
+          "file": "Main.java",
+          "line": 3,
+          "message": "この文に制御が移ることはありません"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 3,
+          "message": "この文に制御が移ることはありません"
+        }
+      ]
+    },
+    {
+      "id": "oc-21c",
+      "ok": true,
+      "matched": [
+        "B",
+        "D"
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "この文に制御が移ることはありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: この文に制御が移ることはありません\n        while (true) { } System.out.println(\"B\");\n                         ^\nエラー1個\n"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "この文に制御が移ることはありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: この文に制御が移ることはありません\n        for (int i = 0; ; i++) { } System.out.println(\"D\");\n                                   ^\nエラー1個\n"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 3,
+          "message": "この文に制御が移ることはありません"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "この文に制御が移ることはありません"
+        }
+      ]
+    },
+    {
+      "id": "oc-22a",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "0:10 3:8"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "0:10 3:8 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-22b",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "1:15 5:12"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "1:15 5:12 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-22c",
+      "ok": true,
+      "matched": [
+        "D"
+      ],
+      "answer": [
+        "D"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "1-20 2-15 4-10"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "1-20 2-15 4-10 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-23a",
+      "ok": true,
+      "matched": [
+        "B"
+      ],
+      "answer": [
+        "B"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "1 2 3"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "1 2 3 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-23b",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "4 5 6"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "4 5 6 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-23c",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "abc"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "abc",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-24a",
+      "ok": true,
+      "matched": [
+        "A"
+      ],
+      "answer": [
+        "A"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "11 21"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "11 21 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-24b",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "22 32"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "22 32 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-24c",
+      "ok": true,
+      "matched": [
+        "C"
+      ],
+      "answer": [
+        "C"
+      ],
+      "actual": {
+        "result": "正常終了",
+        "stdout": "10 20 21"
+      },
+      "compileErrors": [],
+      "console": {
+        "compile": "ok",
+        "stdout": "10 20 21 ",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    {
+      "id": "oc-25a",
+      "ok": true,
+      "matched": [
+        "B",
+        "D"
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイル成功"
+        },
+        "B": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "bはループ・ラベルではありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: bはループ・ラベルではありません\n        b: if (true) { continue b; }\n                       ^\nエラー1個\n"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "ラベルdは未定義です"
+            }
+          ],
+          "javac": "Main.java:3: エラー: ラベルdは未定義です\n        for (int i = 0; i < 1; i++) { break d; }\n                                      ^\nエラー1個\n"
+        },
+        "E": {
+          "result": "コンパイル成功"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "B",
+          "file": "Main.java",
+          "line": 3,
+          "message": "bはループ・ラベルではありません"
+        },
+        {
+          "option": "D",
+          "file": "Main.java",
+          "line": 3,
+          "message": "ラベルdは未定義です"
+        }
+      ]
+    },
+    {
+      "id": "oc-25b",
+      "ok": true,
+      "matched": [
+        "A",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "E"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "ラベルsは未定義です"
+            }
+          ],
+          "javac": "Main.java:3: エラー: ラベルsは未定義です\n        for (int k = 0; k < 2; k++) { break s; }\n                                      ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "qはループ・ラベルではありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: qはループ・ラベルではありません\n        q: if (true) { continue q; }\n                       ^\nエラー1個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 3,
+          "message": "ラベルsは未定義です"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 3,
+          "message": "qはループ・ラベルではありません"
+        }
+      ]
+    },
+    {
+      "id": "oc-25c",
+      "ok": true,
+      "matched": [
+        "A",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "E"
+      ],
+      "perOption": {
+        "A": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "breakがswitch文またはループの外にあります"
+            }
+          ],
+          "javac": "Main.java:3: エラー: breakがswitch文またはループの外にあります\n        p: { System.out.println(\"P\"); break; }\n                                      ^\nエラー1個\n"
+        },
+        "B": {
+          "result": "コンパイル成功"
+        },
+        "C": {
+          "result": "コンパイル成功"
+        },
+        "D": {
+          "result": "コンパイル成功"
+        },
+        "E": {
+          "result": "コンパイルエラー",
+          "errors": [
+            {
+              "file": "Main.java",
+              "line": 3,
+              "message": "tはループ・ラベルではありません"
+            }
+          ],
+          "javac": "Main.java:3: エラー: tはループ・ラベルではありません\n        t: { for (int i = 0; i < 2; i++) { continue t; } }\n                                           ^\nエラー1個\n"
+        }
+      },
+      "compileErrors": [
+        {
+          "option": "A",
+          "file": "Main.java",
+          "line": 3,
+          "message": "breakがswitch文またはループの外にあります"
+        },
+        {
+          "option": "E",
+          "file": "Main.java",
+          "line": 3,
+          "message": "tはループ・ラベルではありません"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "fields": [
+    {
+      "id": "basics",
+      "no": 1,
+      "prefix": "bs",
+      "name": "Javaの概要と簡単なJavaプログラムの作成"
+    },
+    {
+      "id": "types",
+      "no": 2,
+      "prefix": "ty",
+      "name": "Javaの基本データ型と文字列の操作"
+    },
+    {
+      "id": "operators",
+      "no": 3,
+      "prefix": "oc",
+      "name": "演算子と制御構造"
+    },
+    {
+      "id": "classes",
+      "no": 4,
+      "prefix": "cl",
+      "name": "クラスの定義とインスタンスの使用"
+    },
+    {
+      "id": "inheritance",
+      "no": 5,
+      "prefix": "ih",
+      "name": "継承とインターフェイスの使用"
+    },
+    {
+      "id": "exceptions",
+      "no": 6,
+      "prefix": "ex",
+      "name": "例外処理"
+    }
+  ],
+  "topics": [
+    {
+      "id": "oc-arith",
+      "fieldId": "operators",
+      "name": "算術演算子とインクリメント",
+      "keyPoints": [
+        "後置 x++ は元の値を返してから増やし、前置 ++x は増やしてから値を返す",
+        "オペランドは左から右へ評価する。優先順位は結合のしかたを決めるだけ",
+        "int 同士の / は 0 方向へ切り捨て。% の符号は左オペランドに合わせる",
+        "整数の / 0 と % 0 は ArithmeticException、浮動小数点数の / 0.0 は Infinity"
+      ]
+    },
+    {
+      "id": "oc-assign",
+      "fieldId": "operators",
+      "name": "代入と複合代入",
+      "keyPoints": [
+        "+= などの複合代入は左辺の型への暗黙のキャストを含む",
+        "単純代入 = では byte + int のような int の結果をキャストなしで byte に代入できない",
+        "x += 式 は x の値を先に保存してから右辺を評価する",
+        "x = x++ は x を変えない(増加が代入で上書きされる)"
+      ]
+    },
+    {
+      "id": "oc-logic",
+      "fieldId": "operators",
+      "name": "関係・論理演算子と短絡評価",
+      "keyPoints": [
+        "&& は左辺 false、|| は左辺 true で右辺を評価しない(短絡評価)",
+        "boolean に使う & | ^ は両辺を必ず評価する",
+        "&& は || より優先順位が高い",
+        "! は boolean にだけ、< > は数値にだけ使える"
+      ]
+    },
+    {
+      "id": "oc-precedence",
+      "fieldId": "operators",
+      "name": "三項演算子と優先順位",
+      "keyPoints": [
+        "三項演算子は右から結合する(a ? b : c ? d : e)",
+        "* / % は + - より先、同じ優先順位は左から",
+        "+ は左から評価し、文字列が現れた時点から文字列連結になる",
+        "三項演算子は値を返す式。単独の文としては書けない"
+      ]
+    },
+    {
+      "id": "oc-if",
+      "fieldId": "operators",
+      "name": "if文",
+      "keyPoints": [
+        "条件式は boolean 型でなければならない(int は不可)",
+        "if (b = true) は boolean の代入式なのでコンパイルできる",
+        "else は字下げに関係なく一番近い if と結びつく",
+        "中かっこを省略した if の対象は直後の1文だけ"
+      ]
+    },
+    {
+      "id": "oc-switch",
+      "fieldId": "operators",
+      "name": "switch文",
+      "keyPoints": [
+        "使える型は char, byte, short, int とそのラッパー、String、enum",
+        "case の値は定数式で、switch の型の範囲内。重複は不可",
+        "break がなければ下の case へフォールスルーする",
+        "default はどこに書いてもよく、一致する case がないときだけ選ばれる"
+      ]
+    },
+    {
+      "id": "oc-switch-expr",
+      "fieldId": "operators",
+      "name": "switch式とアロー構文",
+      "keyPoints": [
+        "アロー形式(->)はフォールスルーしない",
+        "switch 式はすべての値を網羅する(int なら default 必須)",
+        "ブロックやコロン形式では yield で値を返す。return / break は不可",
+        "コロン形式の switch 式はフォールスルーする",
+        "1つの switch でコロン形式とアロー形式は混在できない"
+      ]
+    },
+    {
+      "id": "oc-while",
+      "fieldId": "operators",
+      "name": "while / do-while と到達可能性",
+      "keyPoints": [
+        "while は先に判定、do-while は後で判定(最低1回実行)",
+        "while (false) や for の条件が定数 false だと本体が到達不能でエラー",
+        "break のない while (true) の後ろの文は到達不能でエラー",
+        "if (false) は例外的にエラーにならない"
+      ]
+    },
+    {
+      "id": "oc-for",
+      "fieldId": "operators",
+      "name": "for文と拡張for文",
+      "keyPoints": [
+        "初期化部と更新部はカンマで複数書ける",
+        "条件は更新部の後に毎回判定する",
+        "拡張 for の変数は要素のコピー。代入しても配列は変わらない",
+        "拡張 for でも var を使える"
+      ]
+    },
+    {
+      "id": "oc-break",
+      "fieldId": "operators",
+      "name": "break・continue・ラベル",
+      "keyPoints": [
+        "break ラベル はラベルの付いた文(ブロックや if も可)を抜ける",
+        "continue ラベル はループのラベルにしか使えない",
+        "ラベルなしの break はループと switch の中でだけ使える"
+      ]
+    }
+  ]
+}

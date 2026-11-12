@@ -1,0 +1,54 @@
+# Java Silver 実行サーバー一式
+#   server … リモート MCP サーバー(認証必須: OAuth か固定トークン)。ホストの Docker でサンドボックスを1回ずつ起動する
+#   caddy  … HTTPS の終端(Let's Encrypt の証明書を自動取得)
+# サンドボックスイメージは compose の外で先にビルドする: docker build -t java-silver-sandbox:17 ./sandbox
+services:
+  server:
+    build: ./server
+    image: java-silver-runner:1
+    restart: unless-stopped
+    environment:
+      RUNNER_PUBLIC_URL: https://${RUNNER_DOMAIN:?RUNNER_DOMAIN を .env に設定してください}
+      RUNNER_TOKENS: ${RUNNER_TOKENS:?RUNNER_TOKENS を .env に設定してください}
+      RUNNER_OWNER_PASSPHRASE: ${RUNNER_OWNER_PASSPHRASE:?RUNNER_OWNER_PASSPHRASE を .env に設定してください}
+      RUNNER_OAUTH_REDIRECT_PREFIXES: ${RUNNER_OAUTH_REDIRECT_PREFIXES:-https://claude.ai/,https://claude.com/}
+      SANDBOX_IMAGE: java-silver-sandbox:17
+      RUNNER_CONCURRENCY: ${RUNNER_CONCURRENCY:-4}
+      RUNNER_QUEUE: ${RUNNER_QUEUE:-16}
+      RUNNER_RATE_PER_MIN: ${RUNNER_RATE_PER_MIN:-120}
+    # docker.sock を使うため、ソケットのグループ ID を付ける(root では動かさない)
+    user: "1000:${DOCKER_GID:?DOCKER_GID を .env に設定してください}"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - runner_data:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    expose:
+      - "8080"
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      RUNNER_DOMAIN: ${RUNNER_DOMAIN:?RUNNER_DOMAIN を .env に設定してください}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - server
+
+volumes:
+  runner_data: {}
+  caddy_data: {}
+  caddy_config: {}

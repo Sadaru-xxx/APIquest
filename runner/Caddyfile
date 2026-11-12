@@ -1,0 +1,10 @@
+# HTTPS で受けて、実行サーバーへ渡す。証明書は自動で取得・更新される
+{$RUNNER_DOMAIN} {
+	request_body {
+		max_size 1MB
+	}
+	reverse_proxy server:8080
+	log {
+		output stdout
+	}
+}
